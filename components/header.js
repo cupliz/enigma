@@ -3,19 +3,18 @@ import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
 export default function Header() {
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
   return (
-    <nav>
-      <div className="nav-wrapper">
-        {/* <a href="#" className="brand-logo right">Logo</a> */}
-        <ul id="nav-mobile" className="left hide-on-med-and-down">
-          <Link href="/about"><a>About</a></Link>
-        </ul>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li> <a onClick={() => i18n.changeLanguage('en')}>English</a></li>
-          <li> <a onClick={() => i18n.changeLanguage('id')}>Indonesia</a></li>
-        </ul>
+    <div className="row" style={{marginTop: 10}}>
+      <div className="col s6 links left-align">
+        <Link href="/"><a>Home</a></Link>
+        <a>|</a>
+        <Link href="/about"><a>About</a></Link>
       </div>
-    </nav>
-  );
+      <div className="col s6 right-align">
+        <a className="btn-small indigo active mr-2" onClick={() => i18n.changeLanguage('en')}>EN</a> &nbsp;
+      <a className="btn-small indigo active" onClick={() => i18n.changeLanguage('id')}>ID</a>
+      </div>
+    </div>
+  )
 }

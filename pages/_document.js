@@ -12,13 +12,14 @@ class MyDocument extends Document {
         <head>
           <title>ENIGMA</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+          <link rel="stylesheet" href="/css/style.css" />
         </head>
         <Head />
         <body>
           <Main />
           <NextScript />
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js" />
         </body>
       </Html>
     )

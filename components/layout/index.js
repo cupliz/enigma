@@ -1,9 +1,13 @@
-import Header from '../header';
+import Header from '../header'
+import Footer from '../Footer'
 
 const Layout = props => (
-  <div>
+  <div className="container">
     <Header />
-    {props.children}
+    <div className="v-content">
+      {props.children}
+    </div>
+    <Footer />
   </div>
 );
 

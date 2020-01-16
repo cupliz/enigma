@@ -2,8 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
-import Head from 'next/head'
-// import { register, unregister } from 'next-offline/runtime'
+import { register, unregister } from 'next-offline/runtime'
 import Layout from '../components/layout'
 
 const Page = (props) => {
@@ -11,7 +10,6 @@ const Page = (props) => {
   const count = useSelector(state => state.count)
   const { t, i18n } = useTranslation()
   useEffect(() => {
-    M.AutoInit()
     // register()
     // return () => {
     //   unregister()
@@ -19,26 +17,23 @@ const Page = (props) => {
   }, [])
   return (
     <Layout>
-      <Head>
-        <title>Home</title>
-      </Head>
-      <div className="parallax-container">
-        <div className="parallax"><img src="http://materializecss.com/images/parallax1.jpg" /></div>
-      </div>
-      <div className="section white">
-        <div className="row container">
-          <h2 className="header">{t('welcome')}</h2>
-          <p className="grey-text text-darken-3 lighten-3"></p>
-
-          <h5 className="">Counting stars: {count}</h5>
-          <button className="waves-effect waves-light btn" onClick={() => dispatch({ type: 'INCREMENT' })}> + </button> &nbsp;
-          <button className="waves-effect waves-light btn" onClick={() => dispatch({ type: 'DECREMENT' })}>-</button> &nbsp;
-          <button className="waves-effect waves-light btn" onClick={() => dispatch({ type: 'RESET' })}>reset</button>
+      <h1 className="mb-4 center"> {t('welcome')} {process.env.VERSION} </h1>
+      <hr />
+      <div className="row mt-4">
+        <h6 className="col s12 m6">Counting stars: {count}</h6>
+        <div className="col s12 m6 right-align mb-2">
+          <button className="btn" onClick={() => dispatch({ type: 'INCREMENT' })}> + </button> &nbsp;
+          <button className="btn" onClick={() => dispatch({ type: 'DECREMENT' })}>-</button> &nbsp;
+          <button className="btn red" onClick={() => dispatch({ type: 'RESET' })}>reset</button>
         </div>
+        {
+          Array(count).fill().map((l, i) => (
+            <div className="col s1" key={i}> <i className="material-icons">star_border</i></div>
+          ))
+        }
       </div>
-      <div className="parallax-container">
-        <div className="parallax"><img src="http://materializecss.com/images/parallax2.jpg" /></div>
-      </div>
+      <p>
+      </p>
     </Layout>
   )
 }

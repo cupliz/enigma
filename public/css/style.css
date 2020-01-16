@@ -1,0 +1,47 @@
+html {
+  height: 100%;
+  width: 100%;
+  /* position: fixed; */
+}
+
+.v-content {
+  margin-top: 20vh ;
+}
+
+.links {
+  padding-top: 10px !important;
+}
+.links a {
+  margin: 0px 10px 0 10px;
+  color: #666;
+}
+.my-1,
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.my-1,
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+.my-2,
+.mt-2 {
+  margin-top: 2em !important;
+}
+.my-2,
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+.my-4,
+.mt-4 {
+  margin-top: 4rem !important;
+}
+.my-4,
+.mb-4 {
+  margin-bottom: 4rem !important;
+}
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  line-height: 1.2;
+}
