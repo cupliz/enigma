@@ -1,0 +1,44 @@
+{
+  "name": "enigma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "next",
+    "build": "next build",
+    "pro": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cupliz/enigma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cupliz/enigma/issues"
+  },
+  "homepage": "https://github.com/cupliz/enigma#readme",
+  "dependencies": {
+    "antd": "^3.26.7",
+    "dotenv": "^8.2.0",
+    "i18next": "^19.0.3",
+    "i18next-browser-languagedetector": "^4.0.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "install": "^0.13.0",
+    "materialize-css": "^1.0.0",
+    "next": "^9.1.7",
+    "next-offline": "^3.4.0",
+    "next-redux-wrapper": "^4.0.1",
+    "npm": "^6.13.6",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-i18next": "^11.3.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0"
+  }
+}
