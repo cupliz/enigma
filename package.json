@@ -6,6 +6,8 @@
   "scripts": {
     "start": "next",
     "build": "next build",
+    "export": "next export",
+    "deploy": "next build && next export",
     "pro": "next start"
   },
   "repository": {
@@ -24,7 +26,6 @@
     "i18next": "^19.0.3",
     "i18next-browser-languagedetector": "^4.0.1",
     "next": "^9.1.7",
-    "next-offline": "^3.4.0",
     "next-redux-wrapper": "^4.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -34,5 +35,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.5"
   }
 }

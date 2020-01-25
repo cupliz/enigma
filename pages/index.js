@@ -2,19 +2,13 @@
 import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
-import { register, unregister } from 'next-offline/runtime'
 import Layout from '../components/layout'
 
 const Page = (props) => {
   const dispatch = useDispatch()
   const count = useSelector(state => state.count)
   const { t, i18n } = useTranslation()
-  useEffect(() => {
-    // register()
-    // return () => {
-    //   unregister()
-    // }
-  }, [])
+  useEffect(() => {}, [])
   return (
     <Layout>
       <h1 className="mb-4 center"> {t('welcome')} {process.env.VERSION} </h1>

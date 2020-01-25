@@ -1,5 +1,4 @@
 require('dotenv').config()
-const withOffline = require('next-offline')
 const nextConfig = {
   // generateSw: false,
   // dontAutoRegisterSw: true,
@@ -28,4 +27,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withOffline(nextConfig)
+module.exports = nextConfig
